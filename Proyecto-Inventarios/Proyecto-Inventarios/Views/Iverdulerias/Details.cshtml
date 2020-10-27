@@ -1,0 +1,33 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Iverduleria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Inventario verduleria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tipo de producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeproducto)
+        </dd>
+        <dt>
+            Cantidad en bultos o canastas
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenbultosocanastas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.tipodeproducto }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

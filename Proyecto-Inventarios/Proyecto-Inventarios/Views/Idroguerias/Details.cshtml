@@ -1,0 +1,65 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Idrogueria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Inventario drogueria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca del laboratorio
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marcalaboratorio)
+        </dd>
+        <dt>
+            Nombre droga
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombredroga)
+        </dd>
+
+        <dt>
+            Tipo de envase
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeenvase)
+        </dd>
+
+        <dt>
+            Peso en gramos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pesoengramos)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechadevencimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.marcalaboratorio }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

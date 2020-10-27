@@ -1,0 +1,79 @@
+﻿@model Proyecto_Inventarios.Models.PrimeraClass
+
+@{
+    ViewBag.Title = "Edit";
+}
+@Styles.Render("~/Content/inventBodega.css");
+<h2 style="color:#219647">INVENTARIO DE BODEGAS</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bebidas - bodega</h2>
+        <p>
+            Inventario de las bebidas en bodega.
+        </p>
+        <p><a href="/Bbebidas/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Aseo - bodega</h2>
+        <p>
+            Inventario de articulos de aseo en la bodega.
+        </p>
+        <p><a href="/Baseos/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Drogueria - bodega</h2>
+        <p>
+            Inventario de drogueria en bodega.
+        </p>
+        <p><a href="/Bdroguerias/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Electro - bodega</h2>
+        <p>
+            Inventario de electrodomesticos en la bodega.
+        </p>
+        <p><a href="/Belectroes/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Juguetes - bodega</h2>
+        <p>
+            Inventario de jugueteria en la bodega.
+        </p>
+        <p><a href="/Bjuguetes/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <!--alto-->
+    <div class="col-md-4">
+        <h2>Licores - bodega</h2>
+        <p>
+            Inventario de licores en la bodega.
+        </p>
+        <p><a href="/Blicores/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>P. alimenticios - bodega</h2>
+        <p>
+            Inventario de los productos alimenticios en la bodega.
+        </p>
+        <p><a href="/BproductosAliments/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Enlatados - bodegas</h2>
+        <p>
+            Inventarios productos enlatados en la bodega.
+        </p>
+        <p><a href="/BproductosEnlatados/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Verdulerias - bodega</h2>
+        <p>
+            Inventario de verdulerias en la bodega.
+        </p>
+        <p><a href="/BVerdulerias/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

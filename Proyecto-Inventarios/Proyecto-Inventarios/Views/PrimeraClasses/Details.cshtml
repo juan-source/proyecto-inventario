@@ -1,0 +1,92 @@
+﻿@model Proyecto_Inventarios.Models.PrimeraClass
+
+@{
+    ViewBag.Title = "Details";
+}
+@Styles.Render("~/Content/inventBodega.css");
+<h2 style="color:#219647">INVENTARIO GENERAL</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bebidas - general</h2>
+        <p>
+            Inventario general de las bebidas.
+        </p>
+        <p><a href="/Ibebidas/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Aseo - general</h2>
+        <p>
+            Inventario general de articulos de aseo.
+        </p>
+        <p><a href="/Iaseos/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Drogueria - general</h2>
+        <p>
+            Inventario general de drogueria.
+        </p>
+        <p><a href="/Idroguerias/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Electro - general</h2>
+        <p>
+            Inventario general de electrodomesticos.
+        </p>
+        <p><a href="/Ielectroes/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Juguetes - general</h2>
+        <p>
+            Inventario general de jugueteria.
+        </p>
+        <p><a href="/Ijuguetes/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <!--alto-->
+    <div class="col-md-4">
+        <h2>Licores - general</h2>
+        <p>
+            Inventario general de licores.
+        </p>
+        <p><a href="/Ilicores/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>P. alimenticios - general</h2>
+        <p>
+            Inventario general de los productos alimenticios.
+        </p>
+        <p><a href="/Ipalimenticios/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Enlatados - general</h2>
+        <p>
+            Inventarios generales productos enlatados.
+        </p>
+        <p><a href="/Ienlatados/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Verdulerias - general</h2>
+        <p>
+            Inventario general de verduleria.
+        </p>
+        <p><a href="/Iverdulerias/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Panaderia - general</h2>
+        <p>
+            Inventarios generales productos de panaderia.
+        </p>
+        <p><a href="/Ipanaderias/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Carniceria - general</h2>
+        <p>
+            Inventario general de productos de carniceria.
+        </p>
+        <p><a href="/Icarnes/index" class="btn btn-primary btn-lg">Inventario &raquo;</a></p>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Volver", "Index")
+</p>

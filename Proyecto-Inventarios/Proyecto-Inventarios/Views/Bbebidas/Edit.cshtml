@@ -1,0 +1,98 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.Bbebida
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Bodega bebidas</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.marcadebebida)
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Marca de bebida
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.marcadebebida, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.marcadebebida, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Tipo de bebida
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.tipodebebida, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tipodebebida, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Tipo de envase
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.tipodeenvase, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tipodeenvase, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Cantidad elementos
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.cantenml, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.cantenml, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Cantidad existente
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.cantexistente, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.cantexistente, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Zona de supermercado
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.zonasupermercado, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.zonasupermercado, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Fecha de vencimiento
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.fechadevencimiento, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.fechadevencimiento, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

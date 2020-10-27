@@ -1,0 +1,39 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.BVerduleria
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Estas seguro de eliminar este articulo?</h3>
+<div>
+    <h4>BVerduleria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tipo de producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeproducto)
+        </dd>
+        <dt>
+            Cantidad en bultos o canastas
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenbultosocanastas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

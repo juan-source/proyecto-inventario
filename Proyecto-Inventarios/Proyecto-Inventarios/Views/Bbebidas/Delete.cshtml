@@ -1,0 +1,79 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.Bbebida
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar este articulo?</h3>
+<div>
+    <h4>Bebidas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca de bebida
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marcadebebida)
+        </dd>
+        <dt>
+            Tipo de bebida
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodebebida)
+        </dd>
+
+        <dt>
+            Tipo de envase
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeenvase)
+        </dd>
+
+        <dt>
+            Cantidad de elementos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenml)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+        <dt>
+            Zona de supermercado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zonasupermercado)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechadevencimiento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

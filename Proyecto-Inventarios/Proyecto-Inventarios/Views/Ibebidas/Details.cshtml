@@ -1,0 +1,73 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Ibebidas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Inventario de bebidas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca de bebida
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marcadebebida)
+        </dd>
+        <dt>
+            Tipo de bebida
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodebebida)
+        </dd>
+
+        <dt>
+            Tipo de envase
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeenvase)
+        </dd>
+
+        <dt>
+            Cantidad en ml
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenml)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+        <dt>
+            Zona supermercado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zonasupermercado)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechadevencimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.marcadebebida }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

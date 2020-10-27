@@ -1,0 +1,87 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.Bdrogueria
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Bodega drogueria</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Marca de laboratorio
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.marcalaboratorio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.marcalaboratorio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            nombre de droga
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.nombredroga, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.nombredroga, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Tipo de envase
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.tipodeenvase, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tipodeenvase, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Peso en gramos 
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.pesoengramos, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.pesoengramos, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Cantidad existente
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.cantexistente, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.cantexistente, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2" style="font-weight: 600">
+            Fecha de vencimiento
+        </div>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.fechadevencimiento, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.fechadevencimiento, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

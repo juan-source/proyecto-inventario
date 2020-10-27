@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Proyecto_Inventarios.Models.PrimeraClass>
+
+@{
+    ViewBag.Title = "Index";
+    Styles.Render("~/Content/inventBodega.css");
+}
+
+<h2 style="color:#219647">TODOS LOS INVENTARIOS</h2>
+
+<table class="table">
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                <div style="height:100px">
+                    
+                        <button >@Html.ActionLink("Inventarios bodegas", "Edit", new { id = item.idprimera })</button>
+                        <button>@Html.ActionLink("inventarios generales", "Details", new { id = item.idprimera })</button>
+
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

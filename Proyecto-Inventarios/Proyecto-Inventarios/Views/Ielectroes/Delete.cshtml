@@ -1,0 +1,55 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Ielectro
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar este articulo?</h3>
+<div>
+    <h4>Inventario electrodomesticos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+        <dt>
+            Tipo de producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoproducto)
+        </dd>
+
+        <dt>
+            Peso o tamaño
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pesootamaño)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

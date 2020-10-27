@@ -1,0 +1,33 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.Bjuguetes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Bodega juguetes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tipo de producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoproducto)
+        </dd>
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.tipoproducto }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Proyecto_Inventarios.Models.Inventarios_Generales.Icarne>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventario de carnes</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Especie animal
+        </th>
+        <th>
+            Tipo de carne
+        </th>
+        <th>
+            Cantidad en libras
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.especieanimal)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tipodecarne)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cantenlb)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.especieanimal }) |
+        @Html.ActionLink("Detalles", "Details", new { id = item.especieanimal }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.especieanimal })
+    </td>
+</tr>
+}
+
+</table>
+<p><a href="/PrimeraClasses/index" class="btn btn-primary btn-lg" style="background-color:#F1C80D">Volver al menu de inventarios &raquo;</a></p>

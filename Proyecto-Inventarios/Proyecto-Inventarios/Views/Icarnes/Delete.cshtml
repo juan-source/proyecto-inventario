@@ -1,0 +1,47 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Icarne
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de eliminar este articulo?</h3>
+<div>
+    <h4>Inventario carne</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Especie animal
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especieanimal)
+        </dd>
+        <dt>
+            Tipo de carne
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodecarne)
+        </dd>
+
+        <dt>
+            Cantidad en libras
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenlb)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

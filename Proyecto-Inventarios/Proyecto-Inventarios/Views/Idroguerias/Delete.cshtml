@@ -1,0 +1,71 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Idrogueria
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro de que deseas eliminar este articulo?</h3>
+<div>
+    <h4>Inventario drogueria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca del laboratorio
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marcalaboratorio)
+        </dd>
+        <dt>
+            Nombre de droga
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombredroga)
+        </dd>
+
+        <dt>
+            Tipo de envase
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeenvase)
+        </dd>
+
+        <dt>
+            Peso en gramos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pesoengramos)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechadevencimiento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Volver", "Index")
+        </div>
+    }
+</div>

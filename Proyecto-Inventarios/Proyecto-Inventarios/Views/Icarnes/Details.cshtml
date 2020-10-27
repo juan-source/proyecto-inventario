@@ -1,0 +1,41 @@
+﻿@model Proyecto_Inventarios.Models.Inventarios_Generales.Icarne
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Inventario carne</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Especie animal
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.especieanimal)
+        </dd>
+        <dt>
+            Tipo de carne
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodecarne)
+        </dd>
+
+        <dt>
+            Cantidad en libras
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenlb)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.especieanimal }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

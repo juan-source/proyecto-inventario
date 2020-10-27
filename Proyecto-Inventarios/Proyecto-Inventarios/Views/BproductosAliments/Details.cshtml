@@ -1,0 +1,73 @@
+﻿@model Proyecto_Inventarios.Models.Bodegas_Inventarios.BproductosAliment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Bodega productos alimenticios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Marca producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marcadeproducto)
+        </dd>
+        <dt>
+            Tipo de producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeproducto)
+        </dd>
+
+        <dt>
+            Tipo de envase o paquete
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipodeenvaseopaquete)
+        </dd>
+
+        <dt>
+            Cantidad en peso o ml
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantenpesooml)
+        </dd>
+
+        <dt>
+            Cantidad existente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantexistente)
+        </dd>
+
+        <dt>
+            Zona supermercado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zonasupermercado)
+        </dd>
+
+        <dt>
+            Fecha de vencimiento
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechadevencimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.marcadeproducto }) |
+    @Html.ActionLink("Volver", "Index")
+</p>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Proyecto_Inventarios.Models.Bodegas_Inventarios.Bbebida>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventario de bebidas</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Marca de Bebida
+        </th>
+        <th>
+            Tipo de Bebida
+        </th>
+        <th>
+            Tipo de envase
+        </th>
+        <th>
+            Cantidad de elementos
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+            Zona
+        </th>
+        <th>
+            Fecha Venc
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.marcadebebida)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tipodebebida)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tipodeenvase)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cantenml)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cantexistente)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.zonasupermercado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fechadevencimiento)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.marcadebebida }) |
+        @Html.ActionLink("Detalles", "Details", new { id = item.marcadebebida }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.marcadebebida })
+    </td>
+</tr>
+}
+
+</table>
+<p><a href="/PrimeraClasses/index" class="btn btn-primary btn-lg" style="background-color:#F1C80D">Volver al menu de inventarios &raquo;</a></p>
